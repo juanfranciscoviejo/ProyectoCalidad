@@ -35,7 +35,7 @@ public class Caracteristicas {
     }
     
     public double calculoFactorAjuste(){
-        return this.factor_Ajuste= 0.65 + (0.01 * this.getSva());
+        return this.factor_Ajuste= 0.65 + (0.01 * this.getSva()); //factor ajuste
     }
 
 }
