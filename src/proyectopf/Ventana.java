@@ -18,6 +18,8 @@ public class Ventana extends javax.swing.JFrame {
         initComponents();
     }
 
+    Caracteristicas c= new Caracteristicas();
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -254,6 +256,12 @@ public class Ventana extends javax.swing.JFrame {
         jPanel2.add(jTextField16, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 270, 17, -1));
         jPanel2.add(jTextField17, new org.netbeans.lib.awtextra.AbsoluteConstraints(331, 296, 16, -1));
         jPanel2.add(jTextField18, new org.netbeans.lib.awtextra.AbsoluteConstraints(403, 322, 42, -1));
+
+        jTextField19.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField19ActionPerformed(evt);
+            }
+        });
         jPanel2.add(jTextField19, new org.netbeans.lib.awtextra.AbsoluteConstraints(403, 218, 43, -1));
         jPanel2.add(jTextField20, new org.netbeans.lib.awtextra.AbsoluteConstraints(403, 244, 43, -1));
         jPanel2.add(jTextField21, new org.netbeans.lib.awtextra.AbsoluteConstraints(403, 270, 43, -1));
@@ -606,8 +614,9 @@ public class Ventana extends javax.swing.JFrame {
         int v14=Integer.parseInt(s14);
        
         int total=v1+v2+v3+v4+v5+v6+v7+v8+v9+v10+v11+v12+v13+v14;
-        
         jTextField25.setText(String.valueOf(total));
+        c.setSva(total);
+        System.out.println(c.getSva());
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
@@ -621,6 +630,10 @@ public class Ventana extends javax.swing.JFrame {
     private void jComboBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox2ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jComboBox2ActionPerformed
+
+    private void jTextField19ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField19ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField19ActionPerformed
 
     /**
      * @param args the command line arguments
