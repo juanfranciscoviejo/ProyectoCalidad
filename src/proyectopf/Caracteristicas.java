@@ -33,7 +33,6 @@ public class Caracteristicas {
     public void setSva(int sva) {
         this.sva = sva;
     }
-    
     public double calculoFactorAjuste(){
         return this.factor_Ajuste= 0.65 + (0.01 * this.getSva()); //factor ajuste
     }
