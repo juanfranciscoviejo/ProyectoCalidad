@@ -5,10 +5,14 @@
  */
 package proyectopf;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author Juan Francisco
  */
 public class Estimacion {
-    
+
+    private ArrayList<Transacciones> listaT = new ArrayList<Transacciones>();
+
 }

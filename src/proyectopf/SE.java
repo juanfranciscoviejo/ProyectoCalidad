@@ -23,15 +23,15 @@ public class SE extends Transacciones {
             s = "M";
         } else if (getElementales() >= 6 && getElementales() <= 19 && getFicheros() < 2) {
             s = "S";
-        } else if (getElementales() >= 6 && (getElementales() <= 19 && getFicheros() == 2 || getFicheros() == 3) ) {
+        } else if (getElementales() >= 6 && (getElementales() <= 19 && getFicheros() == 2 || getFicheros() == 3)) {
             s = "M";
         } else if (getElementales() >= 6 && getElementales() <= 19 && getFicheros() >= 4) {
             s = "C";
         } else if (getElementales() >= 20 && getFicheros() <= 1) {
             s = "M";
-        } else if (getElementales() >= 20 && getFicheros() >2) {
+        } else if (getElementales() >= 20 && getFicheros() > 2) {
             s = "C";
-        } 
+        }
         return s;
     }
 

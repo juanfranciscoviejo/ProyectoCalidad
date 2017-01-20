@@ -11,16 +11,16 @@ package proyectopf;
  */
 public class CE extends Transacciones {
 
-    private int fS;
-    private int eS;
-    
+    private int fS; //Atributos de la SE
+    private int eS; //Atributos de la SE
+
     public CE(String d, int f, int e, int fS, int eS) {
         super(d, f, e);
         this.fS = fS;
         this.eS = eS;
     }
 
-    public String complejidad_S() {
+    public String complejidad_S() { //Complejidad de la SE
         String s = "";
         if (eS <= 5 && fS <= 3) {
             s = "S";
@@ -28,19 +28,19 @@ public class CE extends Transacciones {
             s = "M";
         } else if (eS >= 6 && eS <= 19 && fS < 2) {
             s = "S";
-        } else if (eS >= 6 && (eS <= 19 && fS == 2 || fS == 3) ) {
+        } else if (eS >= 6 && (eS <= 19 && fS == 2 || fS == 3)) {
             s = "M";
         } else if (eS >= 6 && eS <= 19 && fS >= 4) {
             s = "C";
         } else if (eS >= 20 && fS <= 1) {
             s = "M";
-        } else if (eS >= 20 && fS >2) {
+        } else if (eS >= 20 && fS > 2) {
             s = "C";
-        } 
+        }
         return s;
     }
-    
-    public String complejidad() {
+
+    public String complejidad() { //Complejidad de la EE con la SE
         String s = "";
         if (getElementales() <= 4 && getFicheros() <= 2) {
             s = "S";
@@ -59,14 +59,14 @@ public class CE extends Transacciones {
         } else if (getElementales() >= 16 && getFicheros() >= 3) {
             s = "C";
         }
-        
-        String a = complejidad_aux();
-        if (s=="S" && a!="S"){
+
+        String a = complejidad_S();
+        if (s == "S" && a != "S") {
             s = a;
-        } else if (s=="M" && a=="C"){
+        } else if (s == "M" && a == "C") {
             s = a;
         }
-        
+
         return s;
     }
 
